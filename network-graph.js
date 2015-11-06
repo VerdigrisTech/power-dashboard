@@ -12,16 +12,6 @@ var padding = 10;
 var clusterPadding = 10;
 var maxRadius = 5;
 
-// var data = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
-
-/*
-NAMES:
-Main Switchboard
-  All Lighting (phase A, B, C)
-Dist. Panel A
-  L7 (phase A, B, C)
-*/
-
 var data = { data:
   [{
     name: "Main Switchboard",
