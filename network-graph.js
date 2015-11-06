@@ -44,6 +44,16 @@ var data = { data:
       power: 421
     }]
   }]
+};
+
+// sum up the power per circuit
+var panelSum = {};
+for (var i = 0; i < data.data.length; i++) {
+  var name = data.data[i].name;
+  panelSum[name] = 0;
+  for (var j = 0; j < data.data[i].circuits.length; j++) {
+    panelSum[name] += data.data[i].circuits[j].power;
+  }
 }
 
 // Variable n is the total number of nodes.
