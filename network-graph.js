@@ -56,10 +56,12 @@ for (var i = 0; i < data.data.length; i++) {
   }
 }
 
+var panelCount = data.data.length;
+
 // Variable n is the total number of nodes.
-var n = data.data.length;
+var n = panelCount;
 // Variable m is the number of distinct clusters
-var m = 5;
+var m = panelCount;
 
 var color = d3.scale.category20c()
     .domain(d3.range(m));
@@ -67,9 +69,17 @@ var color = d3.scale.category20c()
 // The largest node for each cluster.
 var clusters = new Array(m);
 
-var nodes = d3.range(n).map(function() {
+// transfer object properties into an array
+var panelArray = [];
+for (var key in panelSum) {
+  panelArray.push({name: key, power: panelSum[key]});
+}
+
+var nodes = d3.range(n).map(function(index) {
+  console.log('safadfdas', index);
   var i = Math.floor(Math.random() * m); // cluster number
-  var r = 10; // set radius here
+  var r = panelArray[index].power / 50; // set radius here
+  var name = '';
   var d = {cluster: i, radius: r, rw: 999.9};
   if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = d;
   return d;
