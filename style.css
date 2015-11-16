@@ -1,3 +1,9 @@
 #network-graph {
 	background-color: black;
+	float: left;
+}
+
+#bars {
+	background-color: black;
+	float: left;
 }
