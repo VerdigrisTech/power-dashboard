@@ -8,69 +8,69 @@
 
 // make this into 20 data points
 var data1 = [
-	{time: "14:20", data:	10},
-	{time: "14:21", data:	20},
-	{time: "14:22", data:	30},
-	{time: "14:23", data:	40},
-	{time: "14:24", data:	50},
-	{time: "14:25", data:	60},
-	{time: "14:26", data:	70},
-	{time: "14:27", data:	80},
-	{time: "14:28", data:	90},
-	{time: "14:29", data:100},
-	{time: "14:30", data:	10},
-	{time: "14:31", data:	20},
-	{time: "14:32", data:	30},
-	{time: "14:33", data:	40},
-	{time: "14:34", data:	50},
-	{time: "14:35", data:	60},
-	{time: "14:36", data:	70},
-	{time: "14:37", data:	80},
-	{time: "14:38", data:	90},
-	{time: "14:39", data:100},
-	{time: "14:40", data:	10},
-	{time: "14:41", data:	20},
-	{time: "14:42", data:	30},
-	{time: "14:43", data:	40},
-	{time: "14:44", data:	50},
-	{time: "14:45", data:	60},
-	{time: "14:46", data:	70},
-	{time: "14:47", data:	80},
-	{time: "14:48", data:	90},
-	{time: "14:49", data: 100}
+	{time: "14:20", data:	10, units: "kWh"},
+	{time: "14:21", data:	20, units: "kWh"},
+	{time: "14:22", data:	30, units: "kWh"},
+	{time: "14:23", data:	40, units: "kWh"},
+	{time: "14:24", data:	50, units: "kWh"},
+	{time: "14:25", data:	60, units: "kWh"},
+	{time: "14:26", data:	70, units: "kWh"},
+	{time: "14:27", data:	80, units: "kWh"},
+	{time: "14:28", data:	90, units: "kWh"},
+	{time: "14:29", data: 100, units: "kWh"},
+	{time: "14:30", data:	10, units: "kWh"},
+	{time: "14:31", data:	20, units: "kWh"},
+	{time: "14:32", data:	30, units: "kWh"},
+	{time: "14:33", data:	40, units: "kWh"},
+	{time: "14:34", data:	50, units: "kWh"},
+	{time: "14:35", data:	60, units: "kWh"},
+	{time: "14:36", data:	70, units: "kWh"},
+	{time: "14:37", data:	80, units: "kWh"},
+	{time: "14:38", data:	90, units: "kWh"},
+	{time: "14:39", data: 100, units: "kWh"},
+	{time: "14:40", data:	10, units: "kWh"},
+	{time: "14:41", data:	20, units: "kWh"},
+	{time: "14:42", data:	30, units: "kWh"},
+	{time: "14:43", data:	40, units: "kWh"},
+	{time: "14:44", data:	50, units: "kWh"},
+	{time: "14:45", data:	60, units: "kWh"},
+	{time: "14:46", data:	70, units: "kWh"},
+	{time: "14:47", data:	80, units: "kWh"},
+	{time: "14:48", data:	90, units: "kWh"},
+	{time: "14:49", data: 100, units: "kWh"}
 ];
 
 var data2 = [
-	{time: "14:20", data:100},
-	{time: "14:21", data:	90},
-	{time: "14:22", data:	80},
-	{time: "14:23", data:	70},
-	{time: "14:24", data:	60},
-	{time: "14:25", data:	70},
-	{time: "14:26", data:	40},
-	{time: "14:27", data:	30},
-	{time: "14:28", data:	20},
-	{time: "14:29", data:	10},
-	{time: "14:30", data:100},
-	{time: "14:31", data:	90},
-	{time: "14:32", data:	80},
-	{time: "14:33", data:	70},
-	{time: "14:34", data:	60},
-	{time: "14:35", data:	70},
-	{time: "14:36", data:	40},
-	{time: "14:37", data:	30},
-	{time: "14:38", data:	20},
-	{time: "14:39", data:	10},
-	{time: "14:40", data:100},
-	{time: "14:41", data:	90},
-	{time: "14:42", data:	80},
-	{time: "14:43", data:	70},
-	{time: "14:44", data:	60},
-	{time: "14:45", data:	70},
-	{time: "14:46", data:	40},
-	{time: "14:47", data:	30},
-	{time: "14:48", data:	20},
-	{time: "14:49", data: 10}
+	{time: "14:20", data: 100, units: "kW"},
+	{time: "14:21", data:	90, units: "kW"},
+	{time: "14:22", data:	80, units: "kW"},
+	{time: "14:23", data:	70, units: "kW"},
+	{time: "14:24", data:	60, units: "kW"},
+	{time: "14:25", data:	70, units: "kW"},
+	{time: "14:26", data:	60, units: "kW"},
+	{time: "14:27", data:	65, units: "kW"},
+	{time: "14:28", data:	62, units: "kW"},
+	{time: "14:29", data:	50, units: "kW"},
+	{time: "14:30", data: 48, units: "kW"},
+	{time: "14:31", data:	60, units: "kW"},
+	{time: "14:32", data:	63, units: "kW"},
+	{time: "14:33", data:	70, units: "kW"},
+	{time: "14:34", data:	64, units: "kW"},
+	{time: "14:35", data:	70, units: "kW"},
+	{time: "14:36", data:	40, units: "kW"},
+	{time: "14:37", data:	30, units: "kW"},
+	{time: "14:38", data:	20, units: "kW"},
+	{time: "14:39", data:	10, units: "kW"},
+	{time: "14:40", data: 25, units: "kW"},
+	{time: "14:41", data:	32, units: "kW"},
+	{time: "14:42", data: 44, units: "kW"},
+	{time: "14:43", data:	60, units: "kW"},
+	{time: "14:44", data:	52, units: "kW"},
+	{time: "14:45", data:	30, units: "kW"},
+	{time: "14:46", data:	44, units: "kW"},
+	{time: "14:47", data:	35, units: "kW"},
+	{time: "14:48", data:	60, units: "kW"},
+	{time: "14:49", data: 83, units: "kW"}
 ];
 
 var barData = [];
@@ -83,29 +83,71 @@ var svgContainer = d3.select("#bar-graph");
 // svgContainer.append('g').attr('class', 'bars');
 var gBars = d3.select("#bar-graph").selectAll('.bars');
 
+var findMax = function (data) {
+	var max = Number.NEGATIVE_INFINITY;
+	for (var i = 0; i < data.length; i++) {
+		if (data[i].data > max) {
+			max = data[i].data;
+		}
+	}
+	return max;
+}
+
 var drawBars = function (data, cssClass) {
+	var dataMax = findMax(data);
+	var units;
+
 	cssClass = cssClass || "bar";
 	for (var i = 0; i < data.length; i++) {
 	  gBars.data(data).enter().append("rect")
 		.attr("class", cssClass)
-	  .attr("x", i * 10 + 100)
+	  .attr("x", i * 10 + 160)
 	  .attr("y", 140 )
 	  .attr("width", 6)
 	  .attr("height", 0)
-  	.transition().duration(100).ease("linear")
-  	.delay(function() { return i * 100; })
+  	.transition().duration(200).ease("poly(4)")
+  	.delay(function() { return i * 200; })
 	  .attr("height", function () { return data[i].data; })
-	  .attr("y", 140 - data[i].data);
+	  .attr("y", 140 - data[i].data)
+	  .transition().duration(200).ease("poly(4)")
+  	.delay(function() { return i * 200 + 6000; })
+	  .attr("height", 0)
+	  .attr("y", 140 );
 
+	  // x-axis
 		if (i % 10 === 0 || i === data.length - 1) {
 			gBars.data(data).enter().append("text")
 			.attr("fill", "white")
-		  .attr("x", i * 10 + 90)
-		  .attr("y", 160)
+		  .attr("x", i * 10 + 150)
+		  .attr("y", 170)
 		  .text(function () { return data[i].time})
 		  .attr("class", "axis");
 		}
 	}
+
+	// y-axis top
+	gBars.data(data).enter().append("text")
+			.attr("fill", "white")
+		  .attr("x", 0)
+		  .attr("y", 40)
+		  .text(function () { return dataMax + " " + data[0].units})
+		  .attr("class", "axis");
+
+	// y-axis mid
+	gBars.data(data).enter().append("text")
+			.attr("fill", "white")
+		  .attr("x", 0)
+		  .attr("y", 90)
+		  .text(function () { return dataMax / 2 + " " + data[0].units})
+		  .attr("class", "axis");
+
+	// y-axis bottom
+	gBars.data(data).enter().append("text")
+			.attr("fill", "white")
+		  .attr("x", 0)
+		  .attr("y", 140)
+		  .text(function () { return 0 + " " + data[0].units})
+		  .attr("class", "axis");
 }
 
 var removeBars = function () {
@@ -127,4 +169,4 @@ setInterval(function () {
 	}
 
 	drawBars(barData, cssClass);
-}, 5000);
+}, 12000);
