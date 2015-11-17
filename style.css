@@ -1,3 +1,25 @@
+.title {
+	display: block;
+	background-color: #0073de;
+	color: white;
+	font-family: 'Roboto';
+	padding: 1em;
+}
+
+.footer {
+	display: block;
+	background-color: #0073de;
+	color: white;
+	font-family: 'Roboto';
+	padding-top: 1em;
+}
+
+.inline-header {
+	display: inline;
+	margin-right: 1em;
+	margin-left: 0.8em;
+}
+
 #network-graph {
 	background-color: #0e171d;
 	float: left;
