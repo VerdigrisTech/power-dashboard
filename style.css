@@ -34,7 +34,8 @@
 
 .axis {
   /*font: 10px sans-serif;*/
-  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-family: 'Roboto';
 }
 
 .axis path,
