@@ -102,24 +102,24 @@ var drawBars = function (data, cssClass) {
 	  gBars.data(data).enter().append("rect")
 		.attr("class", cssClass)
 	  .attr("x", i * 10 + 100)
-	  .attr("y", 140 )
+	  .attr("y", 160 )
 	  .attr("width", 6)
 	  .attr("height", 0)
   	.transition().duration(200).ease("poly(4)")
   	.delay(function() { return i * 200; })
 	  .attr("height", function () { return data[i].data; })
-	  .attr("y", 140 - data[i].data)
+	  .attr("y", 160 - data[i].data)
 	  .transition().duration(200).ease("poly(4)")
   	.delay(function() { return i * 200 + 6000; })
 	  .attr("height", 0)
-	  .attr("y", 140 );
+	  .attr("y", 160 );
 
 	  // x-axis
 		if (i % 10 === 0 || i === data.length - 1) {
 			gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", i * 10 + 90)
-		  .attr("y", 170)
+		  .attr("y", 180)
 		  .text(function () { return data[i].time})
 		  .attr("class", "axis");
 		}
@@ -129,7 +129,7 @@ var drawBars = function (data, cssClass) {
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", 80)
-		  .attr("y", 40)
+		  .attr("y", 60)
 		  .text(function () { return dataMax + " " + data[0].units})
 		  .attr("class", "yaxis");
 
@@ -137,7 +137,7 @@ var drawBars = function (data, cssClass) {
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", 80)
-		  .attr("y", 90)
+		  .attr("y", 110)
 		  .text(function () { return dataMax / 2 + " " + data[0].units})
 		  .attr("class", "yaxis");
 
@@ -145,7 +145,7 @@ var drawBars = function (data, cssClass) {
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", 80)
-		  .attr("y", 140)
+		  .attr("y", 160)
 		  .text(function () { return 0 + " " + data[0].units})
 		  .attr("class", "yaxis");
 
@@ -157,8 +157,8 @@ var drawBars = function (data, cssClass) {
   	titleString = "Power";
   }
   gBars.data(data).enter().append("text")
-		  .attr("x", 620)
-		  .attr("y", 20)
+		  .attr("x", 600)
+		  .attr("y", 40)
 		  .text(function () { return titleString + " (" + data[0].units + " per minute)"})
 		  .attr("class", cssClass);
 }
