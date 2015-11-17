@@ -1,12 +1,3 @@
-// BAR CHART DEALIO
-// 
-// X draw bars based on generated data
-// draw axis
-// X draw alternate table (blue)
-// X switch between tables every other second
-
-
-// make this into 20 data points
 var data1 = [
 	{time: "14:20", data:	10, units: "kWh"},
 	{time: "14:21", data:	20, units: "kWh"},
