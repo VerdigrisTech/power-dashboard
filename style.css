@@ -16,6 +16,10 @@
   fill: #ff2a67;
 }
 
+.bar2 {
+  fill: blue;
+}
+
 .axis {
   font: 10px sans-serif;
 }

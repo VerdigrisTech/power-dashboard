@@ -38,31 +38,36 @@ var svgContainer = d3.select("#bar-graph");
 svgContainer.append('g').attr('class', 'bars');
 var gBars = d3.select("#bar-graph").selectAll('.bars');
 
-var drawBars = function (data) {
+var drawBars = function (data, cssClass) {
+	cssClass = cssClass || "bar";
 	for (var i = 0; i < data.length; i++) {
 		  gBars.data(data).enter().append("rect")
-			.attr("class", "bar")
+			.attr("class", cssClass)
 		  .attr("x", i * 10 + 10)
 		  .attr("y", 10)
 		  .attr("width", 2)
+		  .attr("height", 0)
+    	.transition().duration(750).ease("linear")
 		  .attr("height", data[i]);
 	}
 }
 
 var removeBars = function () {
 	d3.selectAll(".bar").remove();
+	d3.selectAll(".bar2").remove();
 }
 
 barData = data1;
 drawBars(barData);
 setInterval(function () {
 	removeBars();
-
+	var cssClass = "bar";
 	if (barData === data1) {
 		barData = data2;
+		cssClass = "bar2";
 	} else {
 		barData = data1;
 	}
 
-	drawBars(barData);
+	drawBars(barData, cssClass);
 }, 2000);
