@@ -15,6 +15,11 @@
 	border-bottom: 1px solid #3d3d3d;
 }
 
+#analytics {
+	background-color: black;
+	float: left;
+}
+
 .visual {
 	float: left;
 }
