@@ -41,3 +41,11 @@
 .x.axis path {
   display: none;
 }
+
+/* float clearfix */
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
