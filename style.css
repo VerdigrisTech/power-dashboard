@@ -33,7 +33,8 @@
 }
 
 .axis {
-  font: 10px sans-serif;
+  /*font: 10px sans-serif;*/
+  font-family: 'Roboto', sans-serif;
 }
 
 .axis path,
@@ -54,3 +55,23 @@
   height: 0;
   clear: both;
 }
+
+/*
+colors
+#0e171d
+reddish-pink
+#ff2a68
+#717171
+cerulean-blue
+#0073de
+pale-peach
+#ffdca5
+kiwi-green
+#9ee359
+topaz
+#0fc8c3
+#5d5d5d
+#e0e0e0
+#bfbfbf
+#909090
+*/
