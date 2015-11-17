@@ -89,18 +89,19 @@ var drawBars = function (data, cssClass) {
 	  gBars.data(data).enter().append("rect")
 		.attr("class", cssClass)
 	  .attr("x", i * 10 + 100)
-	  .attr("y", 120 - data[i].data)
+	  .attr("y", 140 )
 	  .attr("width", 6)
 	  .attr("height", 0)
   	.transition().duration(100).ease("linear")
   	.delay(function() { return i * 100; })
-	  .attr("height", function () { return data[i].data; });
+	  .attr("height", function () { return data[i].data; })
+	  .attr("y", 140 - data[i].data);
 
 		if (i % 10 === 0 || i === data.length - 1) {
 			gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", i * 10 + 90)
-		  .attr("y", 150)
+		  .attr("y", 160)
 		  .text(function () { return data[i].time})
 		  .attr("class", "axis");
 		}
