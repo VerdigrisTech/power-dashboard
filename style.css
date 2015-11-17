@@ -7,3 +7,26 @@
 	background-color: black;
 	float: left;
 }
+
+.visual {
+	float: left;
+}
+
+.bar {
+  fill: #ff2a67;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
