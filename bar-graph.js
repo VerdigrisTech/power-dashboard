@@ -5,6 +5,8 @@
 // draw alternate table (blue)
 // switch between tables every other second
 
+
+// make this into 20 data points
 var data1 = [
 	10,
 	20,
@@ -24,7 +26,7 @@ var data2 = [
 	80,
 	70,
 	60,
-	50,
+	70,
 	40,
 	30,
 	20,
@@ -47,7 +49,8 @@ var drawBars = function (data, cssClass) {
 		  .attr("y", 10)
 		  .attr("width", 2)
 		  .attr("height", 0)
-    	.transition().duration(750).ease("linear")
+    	.transition().duration(200).ease("linear")
+    	.delay(function() { return i * 200; })
 		  .attr("height", data[i]);
 	}
 }
@@ -70,4 +73,4 @@ setInterval(function () {
 	}
 
 	drawBars(barData, cssClass);
-}, 2000);
+}, 3000);
