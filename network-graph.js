@@ -147,6 +147,8 @@ var force = d3.layout.force()
     .on("tick", tick)
     .start();
 
+setInterval(function(){force.alpha(0.2);}, 250);
+
 // Create SVG containing element for graph nodes.
 var svg = d3.select("svg");
 // var svg = d3.select(el).append('svg')
