@@ -47,6 +47,13 @@
   text-anchor: start;
 }
 
+.donut-text {
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+  text-anchor: start;
+}
+
 .yaxis {
   font-weight: 100;
   font-family: 'Roboto';

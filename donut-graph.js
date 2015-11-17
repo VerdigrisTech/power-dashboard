@@ -17,6 +17,9 @@ var svg = d3.select('#donut-graph')
   .attr('transform', 'translate(' + (width / 2 +  200) + 
     ',' + (height / 2 + 50) + ')');
 
+var svgText = d3.select('#donut-graph').selectAll(".donut-text")
+  .append('g');
+
 var arc = d3.svg.arc()
   .innerRadius(radius - donutWidth)
   .outerRadius(radius);
@@ -33,3 +36,14 @@ var path = svg.selectAll('path')
   .attr('fill', function(d, i) { 
     return color(d.data.label);
   });
+
+for (var j = 0; j < dataset.length; j++) {
+  var percent = dataset[j].percent;
+  svgText
+    .data(dataset).enter().append("text")
+    .attr("fill", "white")
+    .attr("x", -10 * percent * Math.cos(j / 8) + 490)
+    .attr("y", 8.5 * percent * Math.sin(j) + 40)
+    .text(dataset[j].label + " " + percent + "%")
+    .attr("class", "donut-text");
+}
