@@ -33,6 +33,9 @@ var data2 = [
 	10
 ];
 
+var width = d3.select("#bar-graph").style("width");
+var height = d3.select("#bar-graph").style("height");
+
 var barData = [];
 
 var svgContainer = d3.select("#bar-graph");
