@@ -31,10 +31,9 @@ var data2 = [
 	10
 ];
 
-var svgContainer = d3.select("body").append("svg")
-																		.attr("id", "bar-graph")
-                                    .attr("width", 200)
-                                    .attr("height", 200);
+var barData = [];
+
+var svgContainer = d3.select("#bar-graph");
 
 svgContainer.append('g').attr('class', 'bars');
 var gBars = d3.select("#bar-graph").selectAll('.bars');
@@ -54,8 +53,16 @@ var removeBars = function () {
 	d3.selectAll(".bar").remove();
 }
 
-drawBars(data1);
+barData = data1;
+drawBars(barData);
 setInterval(function () {
 	removeBars();
-	drawBars(data2);
+
+	if (barData === data1) {
+		barData = data2;
+	} else {
+		barData = data1;
+	}
+
+	drawBars(barData);
 }, 2000);
