@@ -26,10 +26,18 @@
 
 .bar {
   fill: #ff2a67;
+  text-anchor: end;
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
 }
 
 .bar2 {
   fill: #0073de;
+  text-anchor: end;
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
 }
 
 .axis {

@@ -148,6 +148,19 @@ var drawBars = function (data, cssClass) {
 		  .attr("y", 140)
 		  .text(function () { return 0 + " " + data[0].units})
 		  .attr("class", "yaxis");
+
+  // graph title
+  var titleString = "";
+  if (cssClass === "bar") {
+  	titleString = "Energy";
+  } else {
+  	titleString = "Power";
+  }
+  gBars.data(data).enter().append("text")
+		  .attr("x", 620)
+		  .attr("y", 20)
+		  .text(function () { return titleString + " (" + data[0].units + " per minute)"})
+		  .attr("class", cssClass);
 }
 
 var removeBars = function () {
