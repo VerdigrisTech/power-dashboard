@@ -1,8 +1,8 @@
 var dataset = [
-  { label: 'Abulia', count: 10 }, 
-  { label: 'Betelgeuse', count: 20 },
-  { label: 'Cantaloupe', count: 30 },
-  { label: 'Dijkstra', count: 40 }
+  { label: 'Office Equipment', percent: 10 }, 
+  { label: 'Lighting', percent: 20 },
+  { label: 'Other', percent: 30 },
+  { label: 'HVAC', percent: 40 }
 ];
 
 var width = 200;
@@ -22,7 +22,7 @@ var arc = d3.svg.arc()
   .outerRadius(radius);
   
 var pie = d3.layout.pie()
-  .value(function(d) { return d.count; })
+  .value(function(d) { return d.percent; })
   .sort(null);
 
 var path = svg.selectAll('path')
