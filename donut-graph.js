@@ -42,8 +42,8 @@ for (var j = 0; j < dataset.length; j++) {
   svgText
     .data(dataset).enter().append("text")
     .attr("fill", "white")
-    .attr("x", -10 * percent * Math.cos(j / 8) + 490)
-    .attr("y", 8.5 * percent * Math.sin(j) + 40)
+    .attr("x", -8 * percent * Math.cos(j / 40) + 460)
+    .attr("y", 9 * percent * Math.sin(j) + 30)
     .text(dataset[j].label + " " + percent + "%")
     .attr("class", "donut-text");
 }
