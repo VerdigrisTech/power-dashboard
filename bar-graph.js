@@ -78,17 +78,6 @@ var barData = [];
 var width = d3.select("#bar-graph").style("width");
 var height = d3.select("#bar-graph").style("height");
 
-// var x = d3.scale.ordinal()
-//   .domain(d3.range(data.length))
-//   .rangeRoundBands([0, width], 0);
-// var y = d3.scale.linear()
-//         .domain([0, 100])
-//         .range([height, 0]);
-
-// var xScale = d3.scale.linear().
-//   domain([0, 100]). // your data minimum and maximum
-  // range([0, 300]); // the pixels to map to, e.g., the width of the diagram.
-
 var svgContainer = d3.select("#bar-graph");
 
 // svgContainer.append('g').attr('class', 'bars');
@@ -100,15 +89,14 @@ var drawBars = function (data, cssClass) {
 	  gBars.data(data).enter().append("rect")
 		.attr("class", cssClass)
 	  .attr("x", i * 10 + 100)
-	  .attr("y", 10)
+	  .attr("y", 120 - data[i].data)
 	  .attr("width", 6)
 	  .attr("height", 0)
   	.transition().duration(100).ease("linear")
   	.delay(function() { return i * 100; })
-	  .attr("height", data[i].data);
+	  .attr("height", function () { return data[i].data; });
 
 		if (i % 10 === 0 || i === data.length - 1) {
-			console.log('drawing for i:', i);
 			gBars.data(data).enter().append("text")
 			.attr("fill", "white")
 		  .attr("x", i * 10 + 90)
