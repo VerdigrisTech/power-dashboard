@@ -14,8 +14,8 @@ var color = d3.scale.category20b();
 
 var svg = d3.select('#donut-graph')
   .append('g')
-  .attr('transform', 'translate(' + (width / 2) + 
-    ',' + (height / 2) + ')');
+  .attr('transform', 'translate(' + (width / 2 +  200) + 
+    ',' + (height / 2 + 50) + ')');
 
 var arc = d3.svg.arc()
   .innerRadius(radius - donutWidth)
