@@ -101,7 +101,7 @@ var drawBars = function (data, cssClass) {
 	for (var i = 0; i < data.length; i++) {
 	  gBars.data(data).enter().append("rect")
 		.attr("class", cssClass)
-	  .attr("x", i * 10 + 160)
+	  .attr("x", i * 10 + 100)
 	  .attr("y", 140 )
 	  .attr("width", 6)
 	  .attr("height", 0)
@@ -118,7 +118,7 @@ var drawBars = function (data, cssClass) {
 		if (i % 10 === 0 || i === data.length - 1) {
 			gBars.data(data).enter().append("text")
 			.attr("fill", "white")
-		  .attr("x", i * 10 + 150)
+		  .attr("x", i * 10 + 90)
 		  .attr("y", 170)
 		  .text(function () { return data[i].time})
 		  .attr("class", "axis");
@@ -128,32 +128,33 @@ var drawBars = function (data, cssClass) {
 	// y-axis top
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
-		  .attr("x", 0)
+		  .attr("x", 80)
 		  .attr("y", 40)
 		  .text(function () { return dataMax + " " + data[0].units})
-		  .attr("class", "axis");
+		  .attr("class", "yaxis");
 
 	// y-axis mid
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
-		  .attr("x", 0)
+		  .attr("x", 80)
 		  .attr("y", 90)
 		  .text(function () { return dataMax / 2 + " " + data[0].units})
-		  .attr("class", "axis");
+		  .attr("class", "yaxis");
 
 	// y-axis bottom
 	gBars.data(data).enter().append("text")
 			.attr("fill", "white")
-		  .attr("x", 0)
+		  .attr("x", 80)
 		  .attr("y", 140)
 		  .text(function () { return 0 + " " + data[0].units})
-		  .attr("class", "axis");
+		  .attr("class", "yaxis");
 }
 
 var removeBars = function () {
 	d3.selectAll(".bar").remove();
 	d3.selectAll(".bar2").remove();
 	d3.selectAll(".axis").remove();
+	d3.selectAll(".yaxis").remove();
 }
 
 barData = data1;
