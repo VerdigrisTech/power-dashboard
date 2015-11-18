@@ -12,16 +12,6 @@ var padding = 10;
 var clusterPadding = 10;
 var maxRadius = 5;
 
-// var data = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
-
-/*
-NAMES:
-Main Switchboard
-  All Lighting (phase A, B, C)
-Dist. Panel A
-  L7 (phase A, B, C)
-*/
-
 var data = { data:
   [{
     name: "Main Switchboard",
@@ -54,12 +44,50 @@ var data = { data:
       power: 421
     }]
   }]
+};
+
+var circuitCount = 0;
+var nodeArr = [];
+
+// sum up the power per circuit
+var panelSum = {};
+for (var i = 0; i < data.data.length; i++) {
+  var name = data.data[i].name;
+  panelSum[name] = 0;
+  for (var j = 0; j < data.data[i].circuits.length; j++) {
+    var circuitPower = data.data[i].circuits[j].power;
+    panelSum[name] += circuitPower;
+    circuitCount++;
+
+    // add circuit to node array
+    var d = {
+      cluster: i,
+      r: circuitPower,
+      rw: 999.9
+    }
+    nodeArr.push(d);
+  }
+
+  // add panel to node array
+  var d = {
+    cluster: i,
+    r: panelSum[name],
+    rw: 999.9
+  }
+  nodeArr.push(d);
 }
 
+// add circuits to node array
+
+
+var panelCount = data.data.length;
+
+var nodeCount = panelCount + circuitCount;
+
 // Variable n is the total number of nodes.
-var n = data.data.length;
+var n = nodeCount;
 // Variable m is the number of distinct clusters
-var m = 5;
+var m = panelCount;
 
 var color = d3.scale.category20c()
     .domain(d3.range(m));
@@ -67,13 +95,26 @@ var color = d3.scale.category20c()
 // The largest node for each cluster.
 var clusters = new Array(m);
 
-var nodes = d3.range(n).map(function() {
-  var i = Math.floor(Math.random() * m); // cluster number
-  var r = 10; // set radius here
+// transfer object properties into an array
+var panelArray = [];
+for (var key in panelSum) {
+  panelArray.push({name: key, power: panelSum[key]});
+}
+
+var nodes = d3.range(nodeCount).map(function(index) {
+  var i = nodeArr[index].cluster;
+  var r = nodeArr[index].r / 50;
   var d = {cluster: i, radius: r, rw: 999.9};
   if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = d;
   return d;
 });
+
+// also want to map based on circuits
+// assign circuit to appropriate panel cluster
+// set radius that is the panel's power
+// name is circuit name
+// d = asdlfjsal;fsadjfkl;jl
+
 
 // put data into nodes
 // for (var i = 0; i < nodes.length; i++) {
@@ -105,6 +146,8 @@ var force = d3.layout.force()
     .charge(-50)
     .on("tick", tick)
     .start();
+
+setInterval(function(){force.alpha(0.08);}, 250);
 
 // Create SVG containing element for graph nodes.
 var svg = d3.select("svg");

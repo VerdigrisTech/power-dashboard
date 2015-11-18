@@ -1,12 +1,28 @@
 <!doctype html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-  <svg id="network-graph" height="800px" width="1000px">
-  </svg>
+	<div class="title">
+		<h1 class="inline-header">BLUE SKY CENTER</h1>
+		<h3 class="inline-header">A CONNECTED BUILDING</h3>
+	</div>
+  <svg id="network-graph" height="800px" width="50%"></svg>
+  <svg id="bar-graph" height="200px" width="50%"></svg>
+  <svg id="donut-graph" height="298px" width="50%"></svg>
+  <svg id="analytics" height="300px" width="50%"></svg>
+	<div class="footer">
+		<h3 class="inline-header">JABIL</h3>
+		<h3 class="inline-header">Wednesday &#8226; Novermber 3, 2015 &#8226; 14:25 &#8226; San Jose, California &#8226; 68&#176; &#9729;</h3>
+		<h4 class="inline-header">Powered by VERDIGRIS</h4>
+	</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
   <script src="network-graph.js"></script>
+  <script src="bar-graph.js"></script>
+  <script src="donut-graph.js"></script>
+  <script src="analytics.js"></script>
 </body>
 </html>

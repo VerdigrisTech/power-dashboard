@@ -1,0 +1,134 @@
+.title {
+	display: block;
+	background-color: #0073de;
+	color: white;
+	font-family: 'Roboto';
+	padding: 1em;
+}
+
+.footer {
+	display: block;
+	background-color: #0073de;
+	color: white;
+	font-family: 'Roboto';
+	padding-top: 1em;
+}
+
+.inline-header {
+	display: inline;
+	margin-right: 1em;
+	margin-left: 0.8em;
+}
+
+#network-graph {
+	background-color: #0e171d;
+	float: left;
+}
+
+#bar-graph {
+	background-color: #0e171d;
+	float: left;
+}
+
+#donut-graph {
+	background-color: #0e171d;
+	float: left;
+	border-top: 1px solid #717171;
+	border-bottom: 1px solid #717171;
+}
+
+#analytics {
+	background-color: #0e171d;
+	float: left;
+}
+
+.visual {
+	float: left;
+}
+
+.bar {
+  fill: #ff2a67;
+  text-anchor: end;
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+
+.bar2 {
+  fill: #0073de;
+  text-anchor: end;
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+
+.axis {
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+  text-anchor: start;
+}
+
+.donut-text {
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+  text-anchor: start;
+}
+
+.yaxis {
+  font-weight: 100;
+  font-family: 'Roboto';
+  font-size: 12px;
+  text-anchor: end;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.aText {
+	fill: #9ee359;
+	font-size: 36px;
+	font-family: 'Roboto';
+}
+
+.divider {
+	stroke-width: 1px;
+	stroke: #717171;
+}
+
+/* float clearfix */
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/*
+colors
+#0e171d
+reddish-pink
+#ff2a68
+#717171
+cerulean-blue
+#0073de
+pale-peach
+#ffdca5
+kiwi-green
+#9ee359
+topaz
+#0fc8c3
+#5d5d5d
+#e0e0e0
+#bfbfbf
+#909090
+*/
