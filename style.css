@@ -94,6 +94,17 @@
   display: none;
 }
 
+.aText {
+	fill: #9ee359;
+	font-size: 36px;
+	font-family: 'Roboto';
+}
+
+.divider {
+	stroke-width: 1px;
+	stroke: #717171;
+}
+
 /* float clearfix */
 .clearfix:after {
   content: " ";
