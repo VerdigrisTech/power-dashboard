@@ -10,7 +10,9 @@ var height = 200;
 var radius = Math.min(width, height) / 2;
 var donutWidth = 20;
 
-var color = d3.scale.category20b();
+var color = d3.scale.ordinal()
+  .domain([0, 3])
+  .range(['#ffdca5', '#0fc8c3', '#ff2a68', '#0073de']);
 
 var svg = d3.select('#donut-graph')
   .append('g')
