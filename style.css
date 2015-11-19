@@ -135,7 +135,7 @@ topaz
 
 /* Scroller Box */
 #scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
- width: 50%;
+ width: 100%;
  height: 60px;
  overflow: hidden;
  float: left;
