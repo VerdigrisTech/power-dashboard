@@ -144,6 +144,10 @@ topaz
  background-color: #0e171d;
 }
 
+.spacing {
+  white-space: pre;
+}
+
 /* CSS Hack Safari */
 #dummy {;# }
 
