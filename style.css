@@ -132,3 +132,18 @@ topaz
 #bfbfbf
 #909090
 */
+
+/* Scroller Box */
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
+ width: 600px;
+ height: 60px;
+ overflow: hidden;
+}
+
+/* CSS Hack Safari */
+#dummy {;# }
+
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
+ overflow: auto;
+}
+/* Scoller Box */
