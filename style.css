@@ -132,3 +132,26 @@ topaz
 #bfbfbf
 #909090
 */
+
+/* Scroller Box */
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
+ width: 100%;
+ height: 42px;
+ overflow: hidden;
+ float: left;
+ font-family: 'Roboto';
+ color: white;
+ background-color: #0073de;
+}
+
+.spacing {
+  white-space: pre;
+}
+
+/* CSS Hack Safari */
+#dummy {;# }
+
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
+ overflow: auto;
+}
+/* Scoller Box */
