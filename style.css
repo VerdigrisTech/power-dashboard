@@ -135,9 +135,13 @@ topaz
 
 /* Scroller Box */
 #scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4 {
- width: 600px;
+ width: 50%;
  height: 60px;
  overflow: hidden;
+ float: left;
+ font-family: 'Roboto';
+ color: white;
+ background-color: #0e171d;
 }
 
 /* CSS Hack Safari */
